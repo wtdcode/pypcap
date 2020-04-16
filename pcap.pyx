@@ -429,7 +429,7 @@ cdef class pcap:
                         *args
                     )
             elif n == 0:
-                continue
+                raise TimeoutError
             elif n == -1:
                 raise KeyboardInterrupt
             elif n == -2:
