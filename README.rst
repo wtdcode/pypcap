@@ -23,27 +23,12 @@ WinPcap has compatibility issues with Windows 10, therefore
 it's recommended to use `Npcap <https://nmap.org/npcap/>`_
 (Nmap's packet sniffing library for Windows, based on the WinPcap/Libpcap libraries, but with improved speed, portability, security, and efficiency). Please enable WinPcap API-compatible mode during the library installation.
 
-
-Installation
-------------
-
-This package requires:
-
-* libpcap-dev
-
-* python-dev
-
-To install run::
-
-    pip install pypcap
-
-
 Installation from sources
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please clone the sources and run::
 
-    python setup.py install
+    pip3 install .
 
 Note for Windows users: Please download the `Npcap SDK <https://nmap.org/npcap/>`_, unpack the archive and put it into the sibling directory as ``wpdpack`` (``setup.py`` will discover it).
 
@@ -54,7 +39,7 @@ Sample procedure in PowerShell::
     Expand-Archive -LiteralPath npcap-sdk-0.1.zip
     mv npcap-sdk-0.1\npcap-sdk-0.1 wpdpack
     cd pypcap
-    python setup.py install
+    pip3 install .
 
 
 Support
